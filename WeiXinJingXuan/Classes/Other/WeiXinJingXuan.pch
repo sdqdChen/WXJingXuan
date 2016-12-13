@@ -1,0 +1,50 @@
+//
+//  WeiXinJingXuan.pch
+//  WeiXinJingXuan
+//
+//  Created by 陈晓 on 2016/11/27.
+//  Copyright © 2016年 陈晓. All rights reserved.
+//
+
+#ifndef WeiXinJingXuan_pch
+#define WeiXinJingXuan_pch
+
+#import "UIImage+CXImage.h"
+#import "UIView+CXExtension.h"
+#import "UIBarButtonItem+CXBarButtonItem.h"
+#import "CXConst.h"
+#import "UITextField+Placeholder.h"
+#import "CXFileTool.h"
+#import "CXStringDate.h"
+
+
+#define CachesPath NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES).firstObject
+
+/*
+ * 屏幕
+ */
+#define CXScreenH [UIScreen mainScreen].bounds.size.height
+#define CXScreenW [UIScreen mainScreen].bounds.size.width
+#define CXScaleH (CXScreenH / 667.0)
+/**
+ * 颜色
+ */
+#define CXColorA(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)/255.0]
+#define CXColor(r, g, b) CXColorA((r), (g), (b), 255)
+#define CXGrayColor(v) CXColor((v), (v), (v))
+#define CXRandomColor CXColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255))
+#define CXBackgroundColor CXColor(249, 249, 249)
+#define CXBlueColor CXColor(74, 144, 226)
+
+/**
+ * 日志
+ */
+#ifdef DEBUG
+#define CXLog(...) NSLog(__VA_ARGS__)
+#else
+#define CXLog(...)
+#endif
+
+#define CXLogFunc CXLog(@"%s", __func__)
+
+#endif

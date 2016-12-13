@@ -1,0 +1,7 @@
+platform :ios, '8.0'
+
+target ‘WeiXinJingXuan’ do
+  pod 'AFNetworking', '~> 3.1.0'
+  pod 'SVProgressHUD', '~> 2.0.4'
+  pod 'WSProgressHUD', '~> 1.1.1'
+end
