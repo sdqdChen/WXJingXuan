@@ -21,6 +21,8 @@
 
 #pragma mark - 初始化
 - (void)viewDidLoad {
+//    self.clearButton.hidden = YES;
+    
     [super viewDidLoad];
     self.clearButton.hidden = YES;
     [self.clearButton addTarget:self action:@selector(clearText) forControlEvents:UIControlEventTouchUpInside];
